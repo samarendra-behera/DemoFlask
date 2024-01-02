@@ -16,4 +16,7 @@ def create_app():
     from apps.users import users as ubp
     app.register_blueprint(ubp, url_prefix='/users')
 
+    from apps.companies import cbp
+    app.register_blueprint(cbp, url_prefix='/companies')
+
     return app
